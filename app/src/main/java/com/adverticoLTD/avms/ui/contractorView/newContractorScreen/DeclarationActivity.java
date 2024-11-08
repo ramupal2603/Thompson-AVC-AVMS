@@ -94,6 +94,7 @@ public class DeclarationActivity extends BaseActivity {
     public void onClick(View view) {
 
         if (view == edtSignature || view == imgSignature) {
+            edtFirstName.clearFocus();
             Intent intent = new Intent(DeclarationActivity.this, SignatureViewActivity.class);
             startActivityForResult(intent, ConstantClass.REQUEST_SIGN_OUT_SIGNATURE);
         }
