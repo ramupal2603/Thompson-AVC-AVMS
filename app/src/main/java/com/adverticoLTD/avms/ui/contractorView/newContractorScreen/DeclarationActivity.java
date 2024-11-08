@@ -17,6 +17,7 @@ import androidx.annotation.Nullable;
 import com.adverticoLTD.avms.R;
 import com.adverticoLTD.avms.baseClasses.BaseActivity;
 import com.adverticoLTD.avms.helpers.ConstantClass;
+import com.adverticoLTD.avms.helpers.StringUtils;
 import com.adverticoLTD.avms.keyLogSolution.data.upload.UploadFileResponseModel;
 import com.adverticoLTD.avms.keyLogSolution.network.ApiService;
 import com.adverticoLTD.avms.keyLogSolution.network.RetrofitClient;
@@ -80,6 +81,7 @@ public class DeclarationActivity extends BaseActivity {
         if (getIntent() != null) {
             strName = getIntent().getStringExtra(ConstantClass.EXTRAA_VIEW_USER_NAME);
             edtFirstName.setText(strName);
+            StringUtils.setEditTextNonEditable(edtFirstName);
         }
     }
 
@@ -97,7 +99,7 @@ public class DeclarationActivity extends BaseActivity {
         }
 
         if (view == loutSubmit) {
-
+            edtFirstName.clearFocus();
             if (!chkTermsCondition.isChecked()) {
                 showAlertDialog(this,"Please agree to terms and conditions for induction form");
             } else {
@@ -148,7 +150,7 @@ public class DeclarationActivity extends BaseActivity {
                     if (responseModel != null && responseModel.getStatus().equals(ConstantClass.RESPONSE_SUCCESS)) {
 
                         remotePath = responseModel.getSignature_name();
-                        String descOfWork = edtDescriptionWork.getText().toString().trim();
+                        String descOfWork = edtFirstName.getText().toString().trim();
 
                         Intent intent = new Intent();
                         intent.putExtra(ConstantClass.EXTRAA_DESCRIPTION_WORK, descOfWork);

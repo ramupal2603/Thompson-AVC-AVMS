@@ -194,6 +194,14 @@ public class NewContractorActivity extends BaseActivity {
 
             callInsertNormalContractor("", "");
 
+/*
+            String userName = edtFirstName.getText().toString().trim() + " " + edtSurName.getText().toString().trim();
+            Intent contractorIntent = new Intent(NewContractorActivity.this, WebViewPDFActivity.class);
+            contractorIntent.putExtra(ConstantClass.EXTRAA_VIEW_USER_NAME, userName);
+            startActivityForResult(contractorIntent, ConstantClass.REQUEST_NORMAL_CONTRACTOR);
+
+*/
+
 
         }
     }
