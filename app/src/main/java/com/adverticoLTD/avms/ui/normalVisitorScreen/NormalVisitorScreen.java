@@ -135,6 +135,7 @@ public class NormalVisitorScreen extends BaseActivity {
 
         if (view == txtNext) {
             hideKeyBoard();
+            edtOrganization.clearFocus();
             edtCarRegistration.clearFocus();
             shakeView(loutCompanyView);
         }

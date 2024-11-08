@@ -135,6 +135,7 @@ public class NewContractorActivity extends BaseActivity {
 
         if (view == txtNext) {
             hideKeyBoard();
+            edtOrganization.clearFocus();
             edtEmailAddress.clearFocus();
             shakeView(loutCompanyView);
         }

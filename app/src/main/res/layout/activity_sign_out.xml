@@ -61,7 +61,7 @@
                                     android:layout_height="match_parent"
                                     android:background="@android:color/transparent"
                                     android:gravity="center_vertical"
-                                    android:hint="Firstname"
+                                    android:hint="First Name"
                                     android:inputType="textCapSentences|text"
                                     android:paddingLeft="@dimen/largeMargin"
                                     android:textColorHint="@color/darkGrayColor"
@@ -157,12 +157,12 @@
                                         android:layout_weight="1"
                                         android:background="@android:color/transparent"
                                         android:gravity="center_vertical"
-                                        android:hint="Mobile no"
-                                        android:paddingLeft="@dimen/largeMargin"
-                                        android:textColorHint="@color/darkGrayColor"
-                                        android:textColor="@color/darkGrayColor"
+                                        android:hint="Mobile No"
                                         android:imeOptions="actionDone"
                                         android:inputType="phone"
+                                        android:paddingLeft="@dimen/largeMargin"
+                                        android:textColor="@color/darkGrayColor"
+                                        android:textColorHint="@color/darkGrayColor"
                                         android:textSize="@dimen/normalTextSize" />
 
 

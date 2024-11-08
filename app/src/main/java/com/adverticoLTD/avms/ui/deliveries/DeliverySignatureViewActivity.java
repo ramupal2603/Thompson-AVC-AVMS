@@ -75,6 +75,8 @@ public class DeliverySignatureViewActivity extends BaseActivity {
     @Override
     public void onClick(View v) {
         if (v == imgSignature) {
+            hideKeyBoard();
+            edtName.clearFocus();
             Intent intent = new Intent(DeliverySignatureViewActivity.this, SignatureViewActivity.class);
             startActivityForResult(intent, REQUEST_SIGN_IN_SIGNATURE);
         }
@@ -83,6 +85,8 @@ public class DeliverySignatureViewActivity extends BaseActivity {
 
 
         if (v == loutSignInView) {
+            hideKeyBoard();
+            edtName.clearFocus();
             doValidation();
         }
 
