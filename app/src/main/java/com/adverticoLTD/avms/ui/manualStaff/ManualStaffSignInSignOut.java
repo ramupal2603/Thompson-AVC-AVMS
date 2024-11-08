@@ -149,6 +149,7 @@ public class ManualStaffSignInSignOut extends BaseActivity {
         loutImgSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                edtStaffName.clearFocus();
                 callSignInOutMethodForManual(selectedStaffID);
             }
         });

@@ -61,6 +61,7 @@ public class ExistingContractorActivity extends BaseActivity {
     public void onClick(View view) {
 
         if (view == loutImgSignIn) {
+            edtContractorId.clearFocus();
             showDisclaimerDialog();
         }
     }

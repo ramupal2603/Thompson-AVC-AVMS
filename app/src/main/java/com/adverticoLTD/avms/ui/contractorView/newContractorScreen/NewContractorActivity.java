@@ -112,11 +112,13 @@ public class NewContractorActivity extends BaseActivity {
     public void onClick(View view) {
         if (view == edtCompany || view == loutCompanyView) {
             edtOrganization.clearFocus();
+            edtEmailAddress.clearFocus();
             getCompaniesList();
         }
 
         if (view == edtStaff || view == loutStaffView) {
             edtOrganization.clearFocus();
+            edtEmailAddress.clearFocus();
             if (!selectedCompanyID.equals("-1")) {
                 getStaffList();
             } else {
@@ -127,11 +129,13 @@ public class NewContractorActivity extends BaseActivity {
 
         if (view == loutImgSignIn) {
             edtOrganization.clearFocus();
+            edtEmailAddress.clearFocus();
             showDisclaimerDialog();
         }
 
         if (view == txtNext) {
             hideKeyBoard();
+            edtEmailAddress.clearFocus();
             shakeView(loutCompanyView);
         }
     }
@@ -247,7 +251,7 @@ public class NewContractorActivity extends BaseActivity {
                     } else {
                         showAlertDialog(getContext(), getResources().getString(R.string.error_already_signed_in_contractor));
                     }
-                }else if (response.code() == ConstantClass.RESPONSE_UNAUTHORIZED
+                } else if (response.code() == ConstantClass.RESPONSE_UNAUTHORIZED
                         || response.code() == ConstantClass.RESPONSE_UNAUTHORIZED_FOR) {
                     getAccessKeyToken();
                     try {
@@ -311,8 +315,7 @@ public class NewContractorActivity extends BaseActivity {
                     }
                     getStaffList();
 
-                }
-                else {
+                } else {
                     showToastMessage(getString(R.string.error_something_went_wrong));
                 }
                 hideProgressBar();
@@ -375,7 +378,6 @@ public class NewContractorActivity extends BaseActivity {
             }
         });
     }
-
 
 
     void companyListDialog() {

@@ -112,11 +112,13 @@ public class NormalVisitorScreen extends BaseActivity {
     public void onClick(View view) {
         if (view == loutCompanyView || view == edtCompany) {
             edtOrganization.clearFocus();
+            edtCarRegistration.clearFocus();
             getCompaniesList();
         }
 
         if (view == loutStaffView || view == edtStaff) {
             edtOrganization.clearFocus();
+            edtCarRegistration.clearFocus();
             if (!selectedCompanyID.equals("-1")) {
                 getStaffList();
             } else {
@@ -126,12 +128,14 @@ public class NormalVisitorScreen extends BaseActivity {
         }
 
         if (view == loutImgSignIn) {
+            edtCarRegistration.clearFocus();
             edtOrganization.clearFocus();
             showDisclaimerDialog();
         }
 
         if (view == txtNext) {
             hideKeyBoard();
+            edtCarRegistration.clearFocus();
             shakeView(loutCompanyView);
         }
     }
