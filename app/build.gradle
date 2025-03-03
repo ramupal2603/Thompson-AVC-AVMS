@@ -5,9 +5,9 @@ def config = rootProject.extensions.getByName("ext") // Create variable to acces
 android {
     compileSdkVersion 31
     defaultConfig {
-        applicationId "com.quorumbusinesspark.avms"
+        applicationId "com.freetradeexchange.avms"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
